@@ -1,19 +1,21 @@
 @echo off
 echo ===================================================
-echo   LOLYPOP DEPLOYMENT (AUTO-FIX)
+echo   LOLYPOP FINAL PUSH
 echo ===================================================
-echo.
-echo 1. Saving your changes...
+
+echo 1. Creating fix commit...
 git add .
-git commit -m "Auto-update from deploy script"
+git commit -m "Fix sitemap static export"
+
 echo.
-echo 2. Pushing to GitHub...
-git push -u origin main
+echo 2. FORCING PUSH TO GITHUB...
+git push origin main
+
 echo.
 if %errorlevel% neq 0 (
-    echo [ERROR] Something went wrong.
+    echo [ERROR] Push Failed.
 ) else (
-    echo [SUCCESS] Changes sent to Cloudflare!
-    echo Go check your dashboard now.
+    echo [SUCCESS] CODE UPDATED.
+    echo Go to Cloudflare and click RETRY now.
 )
 pause
