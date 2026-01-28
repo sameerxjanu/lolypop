@@ -19,6 +19,10 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "LOLYPOP — Building for the Internet's Wild Side",
   description: "LOLYPOP helps memecoins, betting brands, and internet-native projects stand out, grow, and convert.",
+  metadataBase: new URL("https://lolypop.agency"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     url: "https://lolypop.agency/",
