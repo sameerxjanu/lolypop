@@ -19,10 +19,10 @@ const HypeSection: React.FC<HypeSectionProps> = () => {
         <motion.div
           className="absolute -top-[120px] -left-[120px] md:-top-[180px] md:-left-[180px] w-[500px] h-[500px] md:w-[700px] md:h-[700px] bg-gradient-to-br from-[#ff4281]/40 via-[#ff4281]/10 to-transparent blur-[60px]"
           animate={{
-            x: [0, 40, -20, 35, -30, 10, 0],
-            y: [0, -30, 40, -20, 30, -10, 0],
-            scale: [1, 1.05, 0.95, 1.08, 0.92, 1],
-            rotate: [0, 15, -10, 20, -15, 5, 0],
+            x: [0, 80, -60, 75, -70, 30, 0],
+            y: [0, -70, 80, -50, 70, -30, 0],
+            scale: [1, 1.25, 0.75, 1.3, 0.7, 1.1, 1],
+            rotate: [0, 35, -30, 45, -35, 15, 0],
             borderRadius: [
               "60% 40% 15% 70% / 60% 30% 35% 40%",
               "40% 60% 25% 50% / 40% 60% 25% 50%",
@@ -34,7 +34,7 @@ const HypeSection: React.FC<HypeSectionProps> = () => {
             ]
           }}
           transition={{
-            duration: 23,
+            duration: 18,
             repeat: Infinity,
             repeatType: "mirror",
             ease: "easeInOut"
@@ -46,10 +46,10 @@ const HypeSection: React.FC<HypeSectionProps> = () => {
         <motion.div
           className="absolute -bottom-[120px] -right-[120px] md:-bottom-[180px] md:-right-[180px] w-[500px] h-[500px] md:w-[700px] md:h-[700px] bg-gradient-to-tl from-[#8e4dff]/40 via-[#8e4dff]/10 to-transparent blur-[60px]"
           animate={{
-            x: [0, -35, 25, -45, 20, -15, 0],
-            y: [0, 40, -25, 30, -40, 15, 0],
-            scale: [1, 0.92, 1.08, 0.95, 1.05, 1],
-            rotate: [0, -20, 10, -25, 15, -5, 0],
+            x: [0, -75, 55, -90, 50, -35, 0],
+            y: [0, 80, -60, 70, -80, 35, 0],
+            scale: [1, 0.7, 1.3, 0.75, 1.25, 1.1, 1],
+            rotate: [0, -40, 30, -50, 35, -15, 0],
             borderRadius: [
               "20% 60% 70% 30% / 25% 60% 30% 60%",
               "30% 40% 30% 70% / 30% 30% 70% 40%",
@@ -61,7 +61,7 @@ const HypeSection: React.FC<HypeSectionProps> = () => {
             ]
           }}
           transition={{
-            duration: 29,
+            duration: 22,
             repeat: Infinity,
             repeatType: "mirror",
             ease: "easeInOut"
@@ -72,7 +72,7 @@ const HypeSection: React.FC<HypeSectionProps> = () => {
       <div className="max-w-6xl mx-auto text-center relative z-10 flex flex-col items-center">
         {/* Top Tag */}
         <Reveal animation="scale-in">
-          <span className="inline-block bg-white shadow-sm px-5 py-2 rounded-full text-xs font-black tracking-widest border border-gray-100 uppercase mb-8 text-loly-purple cursor-default">
+          <span className="inline-block bg-gray-100 px-4 py-1 rounded-full text-xs font-bold tracking-widest border border-gray-300 uppercase mb-8 text-gray-600 cursor-default">
             What is Lolypop?
           </span>
         </Reveal>
@@ -109,7 +109,7 @@ const HypeSection: React.FC<HypeSectionProps> = () => {
           <Reveal delay={300} animation="fade-in-up">
             {/* Max width set to keep text in ~2 lines */}
             <p className="text-lg md:text-2xl text-gray-600 font-medium leading-relaxed max-w-4xl mx-auto">
-              We create AI assets, AI GEO & ADS, clipping systems, and AI influencers for brands that want attention and conversions without playing it safe.
+              We create AI content, AI GEO & ADS, AI influencers, and clipping systems for companies that want attention and conversions without playing it safe.
             </p>
           </Reveal>
         </div>

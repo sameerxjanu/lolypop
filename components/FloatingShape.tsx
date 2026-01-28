@@ -27,7 +27,7 @@ const FloatingShape: React.FC<FloatingShapeProps> = ({
 
   return (
     <motion.div
-      className={`absolute pointer-events-none z-0 will-change-transform ${className}`}
+      className={`absolute pointer-events-none z-10 will-change-transform ${className}`}
       style={style}
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
