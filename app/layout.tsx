@@ -24,7 +24,6 @@ export const metadata: Metadata = {
     url: "https://lolypop.agency/",
     title: "LOLYPOP — Building for the Internet's Wild Side",
     description: "LOLYPOP helps memecoins, betting brands, and internet-native projects stand out, grow, and convert.",
-    images: [{ url: "/og-image.png" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -32,9 +31,8 @@ export const metadata: Metadata = {
     description: "LOLYPOP helps memecoins, betting brands, and internet-native projects stand out, grow, and convert.",
     images: ["/og-image.png"],
   },
-  icons: {
-    icon: "/favicon.png",
-  },
+
+
 };
 
 export default function RootLayout({
