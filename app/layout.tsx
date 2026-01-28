@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -31,12 +32,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@lolypopagency",
+    creator: "@lolypopagency",
     title: "LOLYPOP — Building for the Internet's Wild Side",
-    description: "LOLYPOP helps memecoins, betting brands, and internet-native projects stand out, grow, and convert.",
+    description: "LOLYPOP helps memecoins, betting & prediction markets apps, and degen brands stand out, grow, and convert without playing it safe.",
     images: ["/og-image.png"],
   },
-
-
 };
 
 export default function RootLayout({
@@ -49,7 +50,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} antialiased font-sans`}
       >
-        {children}
+        <ErrorBoundary>
+          {children}
+        </ErrorBoundary>
       </body>
     </html>
   );

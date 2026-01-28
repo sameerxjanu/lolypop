@@ -43,7 +43,7 @@ const Contact: React.FC<ContactProps> = () => {
                 <div className="mt-12">
                     <Reveal delay={400} animation="pop">
                         <button
-                            onClick={() => window.location.href = 'mailto:hello@lolypop.agency?subject=Let\'s Build Something Wild'}
+                            onClick={() => window.location.href = `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'hello@lolypop.agency'}?subject=Let\\'s Build Something Wild`}
                             aria-label="Send us an email to start a conversation"
                             className="bg-black text-white text-xl font-bold py-5 px-12 rounded-full border-2 border-white shadow-neo-lg hover:shadow-neo hover:translate-x-[4px] hover:translate-y-[4px] active:shadow-neo-active active:translate-x-[8px] active:translate-y-[8px] transition-all flex items-center gap-3 mx-auto group"
                         >
