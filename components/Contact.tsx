@@ -29,7 +29,7 @@ const Contact: React.FC<ContactProps> = () => {
 
                 <div className="mt-12 space-y-6">
                     <Reveal delay={200}>
-                        <p className="text-xl md:text-2xl text-gray-700 font-medium max-w-2xl mx-auto">
+                        <p className="text-xl md:text-2xl text-gray-800 font-semibold max-w-2xl mx-auto">
                             A memecoin that needs branding? A degen project that deserves attention?
                         </p>
                     </Reveal>
@@ -43,9 +43,9 @@ const Contact: React.FC<ContactProps> = () => {
                 <div className="mt-12">
                     <Reveal delay={400} animation="pop">
                         <button
-                            onClick={() => window.location.href = `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'hello@lolypop.agency'}?subject=Let\\'s Build Something Wild`}
+                            onClick={() => window.location.href = `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'hello@lolypop.agency'}?subject=Let\'s Build Something Wild`}
                             aria-label="Send us an email to start a conversation"
-                            className="bg-black text-white text-xl font-bold py-5 px-12 rounded-full border-2 border-white shadow-neo-lg hover:shadow-neo hover:translate-x-[4px] hover:translate-y-[4px] active:shadow-neo-active active:translate-x-[8px] active:translate-y-[8px] transition-all flex items-center gap-3 mx-auto group"
+                            className="bg-black text-white text-lg md:text-xl font-bold py-5 px-10 md:py-5 md:px-12 rounded-full border-2 border-white shadow-neo-lg hover:shadow-neo hover:translate-x-[4px] hover:translate-y-[4px] active:shadow-neo-active active:translate-x-[8px] active:translate-y-[8px] transition-all flex items-center gap-3 mx-auto group min-h-[56px] touch-manipulation w-full md:w-auto justify-center max-w-md"
                         >
                             <MessageSquare className="w-6 h-6 group-hover:rotate-12 transition-transform" />
                             HIT US UP
@@ -53,7 +53,7 @@ const Contact: React.FC<ContactProps> = () => {
                         </button>
                     </Reveal>
                     <Reveal delay={600}>
-                        <p className="mt-6 font-mono text-xs text-green-700 tracking-wider">
+                        <p className="mt-6 font-mono text-xs text-green-800 tracking-wider font-semibold">
                             Response time: faster than your token can pump 🚀
                         </p>
                     </Reveal>

@@ -243,6 +243,36 @@
       background-position: 0% 50%;
     }
   }
+
+  @keyframes gridPulse {
+
+    0%,
+    100% {
+      opacity: 0.08;
+    }
+
+    50% {
+      opacity: 0.12;
+    }
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Animation variables */
+  --animate-grid-pulse: gridPulse 4s ease-in-out infinite;
+  --animate-gradient-shift: gradientShift 15s ease infinite;
 }
 
 :root {
@@ -287,6 +317,22 @@ h6 {
     linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 40px 40px;
+  position: relative;
+}
+
+.grid-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg,
+      rgba(255, 66, 129, 0.03),
+      rgba(41, 121, 255, 0.03),
+      rgba(142, 77, 255, 0.03),
+      rgba(0, 199, 83, 0.03));
+  background-size: 400% 400%;
+  animation: var(--animate-gradient-shift);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .grid-bg-light {
@@ -294,9 +340,51 @@ h6 {
     linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
   background-size: 40px 40px;
+  position: relative;
+  animation: var(--animate-grid-pulse);
 }
 
+.grid-bg-light::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+      rgba(255, 66, 129, 0.02),
+      transparent 30%,
+      rgba(142, 77, 255, 0.02) 60%,
+      transparent);
+  background-size: 200% 200%;
+  animation: var(--animate-gradient-shift);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Performance optimizations */
 .will-change-transform {
   will-change: transform;
   transform: translateZ(0);
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Reduced motion support for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .grid-bg::before,
+  .grid-bg-light::before {
+    animation: none !important;
+  }
 }

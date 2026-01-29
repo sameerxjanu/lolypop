@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = () => {
           contactSection?.scrollIntoView({ behavior: 'smooth' });
         }}
         aria-label="Scroll to contact section"
-        className="bg-loly-pink text-white font-black py-2.5 px-6 rounded-full border border-black flex items-center gap-2 text-sm uppercase tracking-wide group transition-all duration-200 shadow-neo-lg hover:shadow-neo hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-neo-active active:translate-x-[4px] active:translate-y-[4px]"
+        className="bg-loly-pink text-white font-black py-3 px-6 md:py-2.5 md:px-6 rounded-full border border-black flex items-center gap-2 text-sm uppercase tracking-wide group transition-all duration-200 shadow-neo-lg hover:shadow-neo hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-neo-active active:translate-x-[4px] active:translate-y-[4px] min-h-[48px] touch-manipulation"
       >
         Let's Chat
         <div className="w-2.5 h-2.5 bg-white rounded-full animate-pulse transition-colors" />

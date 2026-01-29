@@ -86,16 +86,16 @@ const Services: React.FC<ServicesProps> = () => {
                   <div className={`relative ${style.bg} border-[3px] md:border-4 border-black rounded-[2rem] p-5 md:p-8 h-full flex flex-col justify-start items-start gap-3 transition-all duration-200 shadow-neo-lg group-hover:shadow-neo group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-active:shadow-neo-active group-active:translate-x-[6px] group-active:translate-y-[6px]`}>
 
                     {/* Icon */}
-                    <div className={`${style.iconColor} transform transition-transform duration-300 animate-wiggle-slow group-hover:scale-110 origin-center`}>
+                    <div className={`${style.iconColor} transform transition-transform duration-300 animate-wiggle-slow group-hover:scale-110 origin-center drop-shadow-sm`}>
                       {item.icon}
                     </div>
 
                     {/* Content */}
                     <div className="w-full">
-                      <h3 className={`text-xl md:text-2xl lg:text-3xl font-black uppercase mb-2 ${style.text} leading-[0.95] tracking-tight`}>
+                      <h3 className={`text-xl md:text-2xl lg:text-3xl font-black uppercase mb-2 ${style.text} leading-[0.95] tracking-tight drop-shadow-sm`}>
                         {item.title}
                       </h3>
-                      <p className={`text-sm md:text-base font-bold leading-relaxed ${style.text} opacity-90`}>
+                      <p className={`text-sm md:text-base font-bold leading-relaxed ${style.text} opacity-95 drop-shadow-sm`}>
                         {item.description}
                       </p>
                     </div>
